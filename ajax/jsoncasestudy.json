@@ -1,0 +1,24 @@
+{
+
+    "events":[
+        {
+        "location": "San Fransisco, CA",
+        "map": "map-ca.png",
+        "date": "May 1"
+        },
+        {"location": "Astin, TX",
+        "map": "map-tx.png",
+        "date": "May 15"
+        },
+        {
+        "location":" New York Ny",
+        "map": "map-ny.png",
+        "date": "May 30"
+
+        }
+
+    ]
+}
+    
+    
+    
