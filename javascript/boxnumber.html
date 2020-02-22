@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .main{
+
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border:2px solid rgb(94, 80, 80);
+        }
+    </style>
+ 
+</head>
+
+<body>
+
+        Boxno
+        <input type="text" class="boxno">
+        Color
+        <input type="color" class="color">
+        <input type="button" id="btn" value="submit" onclick="boxprinting()" >
+        <div class="main">
+            <div class="box">
+            
+            </div>
+            <script>
+                var btn1=document.getElementById("btn");
+                var main=document.getElementsByClassName("main");
+      
+              var boxprinting=function()//function
+              {
+                 var boxval=document.querySelector("box").value;
+                 var bxn=parseInt(boxval);
+                console.log(bxn);
+                 var color1=document.querySelector("color").value;
+
+                 var temp=`<div class="box" style="background-color: ${color1};"></div>`;
+                
+      
+      
+                 for(var i=1;i<=bxn;i++)
+                 {
+                   main.innerHTML+=temp;
+                 }
+              }
+            
+             
+     
+              
+      
+          </script>  </div>
+        
+</body>
+</html>

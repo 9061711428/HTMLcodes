@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        
+    $(document).ready(function(){
+        $('#add').keypress(function(event){
+            var keycode=event.which;
+            if(keycode==13)
+            {
+                $('#orderlist').append($('<li>',{text:$('#add').val()}));
+                $('#add').val('');  
+            }
+        });
+        $('#orderlist').on("click","li",function(){
+        $(this.remove());
+
+    }
+    );
+
+    })
+    
+    
+    </script>
+    
+    
+</head>
+<style>
+    .container{
+            height: 400px;
+            margin-top: 80px;
+            background-color: white;
+            border: solid white;
+        }
+        #add{
+           height: 80px;
+           width: 500px;
+           border: solid 2px blueviolet;
+        }
+</style>
+<body bgcolor="black">
+    <div class="container">
+        
+            <input type="text" id="add" placeholder="What need to be done?" style="position: absolute;top: 200px;left: 500px;">
+            <div id="list">
+             <ul id=orderlist>
+             </ul>
+            </div>
+            
+        </div>  
+</body>
+</html>
